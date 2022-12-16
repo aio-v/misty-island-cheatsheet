@@ -56,14 +56,17 @@ function createTable() {
     for (let craftable in dict) {
         let row = tableBody.insertRow();
         let itemCell = row.insertCell();
+        itemCell.classList.add("center");
         let img = document.createElement('img');
         img.src = dict[craftable].img;
         img.title = dict[craftable].name;
         img.alt = dict[craftable].name;
         img.classList.add("icon");
         itemCell.appendChild(img);
-        let ingredientsCell = row.insertCell();
-        ingredientsCell.classList.add("materials");
+        let cellWrap = row.insertCell();
+        cellWrap.classList.add("center");
+        let ingredientsDiv = document.createElement('div');
+        ingredientsDiv.classList.add("materials");
         for (const [mat, count] of dict[craftable].ingredients) {
             let div = document.createElement('div');
             let num = document.createElement('span');
@@ -76,7 +79,8 @@ function createTable() {
             icon.title = mat.name;
             icon.classList.add("icon");
             div.appendChild(icon);
-            ingredientsCell.appendChild(div);
+            ingredientsDiv.appendChild(div);
+            cellWrap.appendChild(ingredientsDiv);
         }
         let unlockCell = row.insertCell();
         unlockCell.innerHTML = dict[craftable].unlock;

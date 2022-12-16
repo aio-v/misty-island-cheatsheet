@@ -37,6 +37,14 @@ select {
     height: 50px;
 }
 
+.tablesheet {
+    overflow-x: auto;
+} 
+
+.craft {
+    border-collapse: collapse;
+}
+
 .craft thead {
     font-size: larger;
     font-weight: bold;
@@ -48,10 +56,18 @@ select {
     vertical-align: middle;
 }
 
-.materials {
-    display: flex;
+.craft tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
+.materials {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    row-gap: 5px;
+}
 img {   
     display: inline-block;
     vertical-align: middle;
