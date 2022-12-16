@@ -12,12 +12,20 @@
     
 <h1>Misty Island Crafting Cheat Sheet</h1>
 
-<select id="table_select">
-    <option value="tools">ToolBox</option>
-    <option value="armor">Armor</option>
-    <option value="structures">Structure</option>
-    <option value="manufactures" selected>Manufacture</option>
-</select>
+<div id="options">
+    <select id="table_select">
+        <option value="tools">ToolBox</option>
+        <option value="weapons">Weapon</option>
+        <option value="armor">Armor</option>
+        <option value="structures">Structure</option>
+        <option value="defend">Defend</option>
+        <option value="manufactures" selected>Manufacture</option>
+    </select>
+    <div id="convert">
+        <input type="checkbox" id="check">
+        <label for="check">Convert to Base Materials</label> 
+    </div>
+</div>
 
 <div id="tablesheet"></div>
 <script>var exports = {};</script>

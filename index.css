@@ -2,9 +2,29 @@ body {
     font-family: 'Montserrat';
 }
 
-select {
+#options {
     font-size: large;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+select {
+    font-size: large;
+    font-family: 'Montserrat';
+}
+
+#convert {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    column-gap: 5px;
+}
+
+#check {
+    width: 17px;
+    height: 17px;
 }
 
 .count {
