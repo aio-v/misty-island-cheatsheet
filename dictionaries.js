@@ -23,6 +23,8 @@ items.smilodon_leather = { name: "smilodon_leather", img: "misty_island_assets/m
 items.smilodon_canine = { name: "smilodon_canine", img: "misty_island_assets/materials/smilodon-canine.png", notes: "" };
 items.neophron_feather = { name: "neophron_feather", img: "misty_island_assets/materials/neophron-feather.png", notes: "" };
 items.golem_rubble = { name: "golem_rubble", img: "misty_island_assets/materials/golem-rubble.png", notes: "" };
+items.fainted_jungle_pig = { name: "fainted_jungle_pig", img: "misty_island_assets/materials/fainted-jungle-pig.png", notes: "Obtained from jungle pigs (uncommon)." };
+items.fainted_smilodon = { name: "fainted_smilodon", img: "misty_island_assets/materials/fainted-smilodon.png", notes: "" };
 // ------------------------------------------------
 // -------------------EDIBLES----------------------
 // ------------------------------------------------
@@ -85,6 +87,34 @@ manufactures.gunpowder = {
     img: "misty_island_assets/manufacture/gunpowder.png",
     ingredients: [[items.golem_rubble, 1], [manufactures.charcoal, 1]],
     unlock: "???",
+    notes: ""
+};
+manufactures.processed_wood = {
+    name: "processed glued laminated wood",
+    img: "misty_island_assets/manufacture/processed-wood.png",
+    ingredients: [[manufactures.board, 2], [items.log, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+manufactures.screw = {
+    name: "screw",
+    img: "misty_island_assets/manufacture/screw.png",
+    ingredients: [[items.iron, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+manufactures.cog = {
+    name: "cog",
+    img: "misty_island_assets/manufacture/cog.png",
+    ingredients: [[items.iron, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+manufactures.lever = {
+    name: "lever",
+    img: "misty_island_assets/manufacture/lever.png",
+    ingredients: [[manufactures.iron_plate, 1], [manufactures.iron_rod, 1]],
+    unlock: "Industrial Worktable",
     notes: ""
 };
 manufactures.gold_bar = {
@@ -216,6 +246,13 @@ tools.cookbook = {
     unlock: "Survival Worktable",
     notes: ""
 };
+tools.leather_saddle = {
+    name: "leather saddle",
+    img: "misty_island_assets/toolbox/leather-saddle.png",
+    ingredients: [[items.fainted_jungle_pig, 1], [manufactures.rope, 1], [items.leather, 2]],
+    unlock: "???, may need fainted jungle pig in inventory",
+    notes: ""
+};
 // ------------------------------------------------
 // ------------------STRUCTURES--------------------
 // ------------------------------------------------
@@ -266,6 +303,62 @@ structures.palm_tent = {
     img: "misty_island_assets/structures/palm-tent.png",
     ingredients: [[items.leaf, 6], [manufactures.board, 1]],
     unlock: "Survival Worktable",
+    notes: ""
+};
+structures.alchemy_pot = {
+    name: "alchemy pot",
+    img: "misty_island_assets/structures/alchemy-pot.png",
+    ingredients: [[manufactures.brick, 2], [items.iron, 2], [manufactures.water_bucket, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.countertop = {
+    name: "countertop",
+    img: "misty_island_assets/structures/countertop.png",
+    ingredients: [[manufactures.board, 1], [manufactures.brick, 2], [manufactures.iron_plate, 2], [manufactures.charcoal, 1]],
+    unlock: "Industrial Worktable",
+    notes: "3 cooking slots"
+};
+structures.streetlight = {
+    name: "streetlight",
+    img: "misty_island_assets/structures/streetlight.png",
+    ingredients: [[manufactures.iron_rod, 1], [manufactures.charcoal, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.sturdy_box = {
+    name: "sturdy box",
+    img: "misty_island_assets/structures/alchemy-pot.png",
+    ingredients: [[manufactures.iron_plate, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.feather_tent = {
+    name: "feather tent",
+    img: "misty_island_assets/structures/feather-tent.png",
+    ingredients: [[items.feather, 4], [items.leather, 2], [manufactures.board, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.well = {
+    name: "alchemy pot",
+    img: "misty_island_assets/structures/alchemy-pot.png",
+    ingredients: [[manufactures.brick, 3], [manufactures.processed_wood, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.monster_sound_speaker = {
+    name: "monster sound speaker",
+    img: "misty_island_assets/structures/monster-sound-speaker.png",
+    ingredients: [[manufactures.board, 2], [manufactures.iron_rod, 1], [manufactures.fainted_smilodon, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.molar_trap = {
+    name: "molar trap",
+    img: "misty_island_assets/structures/molar-trap.png",
+    ingredients: [[items.molar, 2], [manufactures.iron_plate, 1]],
+    unlock: "Industrial Worktable",
     notes: ""
 };
 // ------------------------------------------------
