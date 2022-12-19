@@ -1,5 +1,5 @@
 import { Item, Craftable } from './types'
-import { items as materials, tools, manufactures, structures, armor, weapons, defend } from './dictionaries.js'
+import { items as materials, tools, manufactures, structures, armor, weapons, defend, potions, mounts } from './dictionaries.js'
 
 const tables = {
     'manufactures' : manufactures,
@@ -8,6 +8,8 @@ const tables = {
     'armor' : armor,
     'weapons': weapons,
     'defend': defend,
+    'potions': potions,
+    'mounts': mounts
 }
 
 

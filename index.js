@@ -1,4 +1,4 @@
-import { items as materials, tools, manufactures, structures, armor, weapons, defend } from './dictionaries.js';
+import { items as materials, tools, manufactures, structures, armor, weapons, defend, potions, mounts } from './dictionaries.js';
 const tables = {
     'manufactures': manufactures,
     'tools': tools,
@@ -6,6 +6,8 @@ const tables = {
     'armor': armor,
     'weapons': weapons,
     'defend': defend,
+    'potions': potions,
+    'mounts': mounts
 };
 function isCraftable(x) {
     return x.ingredients !== undefined;

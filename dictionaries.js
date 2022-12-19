@@ -5,6 +5,8 @@ let structures = {};
 let tools = {};
 let manufactures = {};
 let defend = {};
+let potions = {};
+let mounts = {};
 // ------------------------------------------------
 // ---------------------ITEMS----------------------
 // ------------------------------------------------
@@ -25,6 +27,10 @@ items.neophron_feather = { name: "neophron_feather", img: "misty_island_assets/m
 items.golem_rubble = { name: "golem_rubble", img: "misty_island_assets/materials/golem-rubble.png", notes: "" };
 items.fainted_jungle_pig = { name: "fainted_jungle_pig", img: "misty_island_assets/materials/fainted-jungle-pig.png", notes: "Obtained from jungle pigs (uncommon)." };
 items.fainted_smilodon = { name: "fainted_smilodon", img: "misty_island_assets/materials/fainted-smilodon.png", notes: "" };
+items.deep_sea_stone = { name: "deep_sea_stone", img: "misty_island_assets/materials/deep-sea-stone.png", notes: "" };
+items.thunder_stone = { name: "thunder_stone", img: "misty_island_assets/materials/thunder-stone.png", notes: "" };
+items.lava_stone_powder = { name: "lava_stone_powder", img: "misty_island_assets/materials/lava-stone-powder.png", notes: "" };
+items.lava_stone = { name: "lava_stone", img: "misty_island_assets/materials/lava-stone.png", notes: "" };
 // ------------------------------------------------
 // -------------------EDIBLES----------------------
 // ------------------------------------------------
@@ -85,8 +91,8 @@ manufactures.iron_rod = {
 manufactures.gunpowder = {
     name: "gunpowder",
     img: "misty_island_assets/manufacture/gunpowder.png",
-    ingredients: [[items.golem_rubble, 1], [manufactures.charcoal, 1]],
-    unlock: "???",
+    ingredients: [[manufactures.charcoal, 1], [items.lava_stone_powder, 1]],
+    unlock: "Alchemy Pot",
     notes: ""
 };
 manufactures.processed_wood = {
@@ -122,6 +128,55 @@ manufactures.gold_bar = {
     img: "misty_island_assets/manufacture/gold-bar.png",
     ingredients: [[items.gold, 3]],
     unlock: "Industrial Worktable",
+    notes: ""
+};
+manufactures.red_flower_powder = {
+    name: "red flower powder",
+    img: "misty_island_assets/manufacture/red-flower-powder.png",
+    ingredients: [[items.petal, 1]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.banana_powder = {
+    name: "banana powder",
+    img: "misty_island_assets/manufacture/banana-powder.png",
+    ingredients: [[items.banana, 1]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.herbal_powder = {
+    name: "herbal powder",
+    img: "misty_island_assets/manufacture/herbal-powder.png",
+    ingredients: [[items.herb, 1]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.water_jewel = {
+    name: "jewel of water",
+    img: "misty_island_assets/manufacture/water-jewel.png",
+    ingredients: [[items.deep_sea_stone, 1]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.lightning_jewel = {
+    name: "jewel of lightning",
+    img: "misty_island_assets/manufacture/lightning-jewel.png",
+    ingredients: [[items.thunder_stone, 1]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.lava_solution = {
+    name: "lava solution",
+    img: "misty_island_assets/manufacture/lava-solution.png",
+    ingredients: [[items.lava_stone_powder, 2]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+manufactures.regeneration_solution = {
+    name: "regeneration solution",
+    img: "misty_island_assets/manufacture/regeneration-solution.png",
+    ingredients: [[manufactures.red_flower_powder, 2]],
+    unlock: "Alchemy Pot",
     notes: ""
 };
 // ------------------------------------------------
@@ -225,6 +280,20 @@ manufactures.cement_powder = {
     unlock: "Survival Worktable",
     notes: ""
 };
+tools.whetstone = {
+    name: "whetstone",
+    img: "misty_island_assets/toolbox/whetstone.png",
+    ingredients: [[items.stone, 3]],
+    unlock: "Alchemy Pot",
+    notes: ""
+};
+tools.fireworks = {
+    name: "fireworks",
+    img: "misty_island_assets/toolbox/fireworks.png",
+    ingredients: [[manufactures.gunpowder, 1], [manufactures.red_flower_powder, 1]],
+    unlock: "Alchemy Pot",
+    notes: "Attack +30. Defense +10%. Stun duration 540s."
+};
 tools.demolition_hammer = {
     name: "demolition hammer",
     img: "misty_island_assets/toolbox/demolition-hammer.png",
@@ -250,8 +319,8 @@ tools.leather_saddle = {
     name: "leather saddle",
     img: "misty_island_assets/toolbox/leather-saddle.png",
     ingredients: [[items.fainted_jungle_pig, 1], [manufactures.rope, 1], [items.leather, 2]],
-    unlock: "???, may need fainted jungle pig in inventory",
-    notes: ""
+    unlock: "Survival Worktable, need fainted jungle pig in inventory",
+    notes: "Gives jungle pig mount on use"
 };
 // ------------------------------------------------
 // ------------------STRUCTURES--------------------
@@ -268,6 +337,13 @@ structures.industrial_worktable = {
     img: "misty_island_assets/structures/industrial-worktable.png",
     ingredients: [[manufactures.board, 3], [manufactures.iron_rod, 5], [items.gold, 5]],
     unlock: "Survival Worktable",
+    notes: ""
+};
+structures.engineering_worktable = {
+    name: "engineering worktable",
+    img: "misty_island_assets/structures/engineering-worktable.png",
+    ingredients: [[manufactures.iron_plate, 5], [manufactures.lever, 2], [manufactures.screw, 2], [items.lava_stone, 5]],
+    unlock: "Industrial Worktable",
     notes: ""
 };
 structures.bonfire = {
@@ -328,7 +404,7 @@ structures.streetlight = {
 };
 structures.sturdy_box = {
     name: "sturdy box",
-    img: "misty_island_assets/structures/alchemy-pot.png",
+    img: "misty_island_assets/structures/sturdy-box.png",
     ingredients: [[manufactures.iron_plate, 2]],
     unlock: "Industrial Worktable",
     notes: ""
@@ -341,8 +417,8 @@ structures.feather_tent = {
     notes: ""
 };
 structures.well = {
-    name: "alchemy pot",
-    img: "misty_island_assets/structures/alchemy-pot.png",
+    name: "well",
+    img: "misty_island_assets/structures/well.png",
     ingredients: [[manufactures.brick, 3], [manufactures.processed_wood, 1]],
     unlock: "Industrial Worktable",
     notes: ""
@@ -350,7 +426,7 @@ structures.well = {
 structures.monster_sound_speaker = {
     name: "monster sound speaker",
     img: "misty_island_assets/structures/monster-sound-speaker.png",
-    ingredients: [[manufactures.board, 2], [manufactures.iron_rod, 1], [manufactures.fainted_smilodon, 1]],
+    ingredients: [[manufactures.board, 2], [manufactures.iron_rod, 1], [items.fainted_smilodon, 1]],
     unlock: "Industrial Worktable",
     notes: ""
 };
@@ -359,6 +435,13 @@ structures.molar_trap = {
     img: "misty_island_assets/structures/molar-trap.png",
     ingredients: [[items.molar, 2], [manufactures.iron_plate, 1]],
     unlock: "Industrial Worktable",
+    notes: ""
+};
+structures.sticky_platform = {
+    name: "sticky platform",
+    img: "misty_island_assets/structures/sticky-platform.png",
+    ingredients: [[items.poison, 5], [manufactures.cement_powder, 1]],
+    unlock: "Alchemy Pot",
     notes: ""
 };
 // ------------------------------------------------
@@ -489,6 +572,13 @@ armor.lightning_rod_hat = {
     ingredients: [[items.iron, 4], [manufactures.iron_rod, 1], [items.golem_rubble, 1]],
     unlock: "Industrial Worktable",
     notes: "Defense +7%."
+};
+armor.lizardman_chief_hat = {
+    name: "chief of lizardman hat",
+    img: "misty_island_assets/armor/lizardman-chief-hat.png",
+    ingredients: [[items.lizardman_skin, 4], [items.neophron_feather, 2]],
+    unlock: "Alchemy Pot",
+    notes: "Defense +6%."
 };
 armor.rope_sandals = {
     name: "rope sandals",
@@ -654,22 +744,133 @@ defend.wooden_fence = {
     name: "wooden fence",
     img: "misty_island_assets/defend/wooden-fence.png",
     ingredients: [[items.log, 3], [manufactures.rope, 2]],
-    unlock: "-",
+    unlock: "Survival Worktable",
     notes: ""
 };
 defend.wooden_barricade = {
     name: "wooden barricade",
     img: "misty_island_assets/defend/wooden-barricade.png",
     ingredients: [[manufactures.board, 2], [manufactures.rope, 2], [items.stone, 2]],
-    unlock: "-",
+    unlock: "Survival Worktable",
     notes: ""
 };
 defend.crossbow_tower = {
     name: "crossbow tower",
     img: "misty_island_assets/defend/crossbow-tower.png",
     ingredients: [[manufactures.board, 2], [manufactures.rope, 1], [manufactures.iron_plate, 1]],
-    unlock: "-",
+    unlock: "Survival Worktable",
     notes: ""
 };
-export { items, manufactures, tools, structures, armor, defend, weapons, };
+defend.stone_wall = {
+    name: "stone wall",
+    img: "misty_island_assets/defend/stone-wall.png",
+    ingredients: [[items.stone, 5], [manufactures.iron_rod, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+defend.advanced_stone_wall = {
+    name: "advanced stone wall",
+    img: "misty_island_assets/defend/advanced-stone-wall.png",
+    ingredients: [[manufactures.brick, 2], [manufactures.cement_powder, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+defend.enhanced_crossbow_tower = {
+    name: "enhanced crossbow tower",
+    img: "misty_island_assets/defend/enhanced-crossbow-tower.png",
+    ingredients: [[manufactures.brick, 5], [manufactures.board, 5], [manufactures.rope, 2]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+defend.mortar_tower = {
+    name: "mortar tower",
+    img: "misty_island_assets/defend/mortar-tower.png",
+    ingredients: [[manufactures.iron_plate, 3], [manufactures.brick, 3], [manufactures.gunpowder, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+defend.cannon_tower = {
+    name: "cannon tower",
+    img: "misty_island_assets/defend/cannon-tower.png",
+    ingredients: [[manufactures.iron_plate, 3], [manufactures.brick, 2], [manufactures.gunpowder, 1], [manufactures.gold_bar, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+// ------------------------------------------------
+// -------------------POTIONS----------------------
+// ------------------------------------------------
+potions.life_force_recovery_potion_s = {
+    name: "life force recovery potion (S)",
+    img: "misty_island_assets/potions/life-force-recovery-potion-s.png",
+    ingredients: [[manufactures.lava_solution, 1], [manufactures.banana_powder, 2], [manufactures.herbal_powder, 1]],
+    unlock: "Alchemy Pot",
+    notes: "Life Force +150."
+};
+potions.life_force_recovery_potion_l = {
+    name: "life force recovery potion (L)",
+    img: "misty_island_assets/potions/life-force-recovery-potion-l.png",
+    ingredients: [[manufactures.lava_solution, 2], [manufactures.banana_powder, 2], [manufactures.herbal_powder, 1], [items.gold, 1]],
+    unlock: "Alchemy Pot",
+    notes: "Life Force +300."
+};
+potions.acting_power_recovery_potion_s = {
+    name: "acting power recovery potion (s)",
+    img: "misty_island_assets/potions/acting-power-recovery-potion-s.png",
+    ingredients: [[manufactures.lava_solution, 1], [manufactures.banana_powder, 1], [manufactures.herbal_powder, 2]],
+    unlock: "Alchemy Pot",
+    notes: "Acting Power +80."
+};
+potions.glowing_potion = {
+    name: "glowing potion",
+    img: "misty_island_assets/potions/glowing-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.lava_stone_powder, 2], [items.gold, 1]],
+    unlock: "Alchemy Pot",
+    notes: "See surroundings for 540s."
+};
+potions.attack_power_increase_potion = {
+    name: "attack power increase potion",
+    img: "misty_island_assets/potions/attack-power-increase-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [manufactures.herbal_powder, 1], [items.wild_mushroom, 1]],
+    unlock: "Alchemy Pot",
+    notes: "Attack +40 for 540s."
+};
+potions.defense_increase_potion = {
+    name: "defense increase potion",
+    img: "misty_island_assets/potions/defense-increase-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.golem_rubble, 2]],
+    unlock: "Alchemy Pot",
+    notes: "Defense +10% for 540s."
+};
+potions.speed_increase_potion = {
+    name: "speed increase potion",
+    img: "misty_island_assets/potions/speed-increase-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.smilodon_canine, 1], [items.molar, 2]],
+    unlock: "Alchemy Pot",
+    notes: "Speed +30 for 540s."
+};
+potions.jump_increase_potion = {
+    name: "jump increase potion",
+    img: "misty_island_assets/potions/jump-increase-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.neophron_feather, 1], [items.feather, 2]],
+    unlock: "Alchemy Pot",
+    notes: "Jump +15 for 540s."
+};
+potions.poison_potion = {
+    name: "poison potion",
+    img: "misty_island_assets/potions/poison-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.poison, 1]],
+    unlock: "Alchemy Pot",
+    notes: "Attack +60 for 540s, Life Force -50%."
+};
+// ------------------------------------------------
+// ---------------------MOUNT----------------------
+// ------------------------------------------------
+mounts.magic_wings = {
+    name: "magic wings one-time coupon",
+    img: "misty_island_assets/mounts/magic-wings.png",
+    ingredients: [[items.neophron_feather, 2], [manufactures.cog, 2], [items.lava_stone_powder, 1]],
+    unlock: "Industrial Worktable",
+    notes: ""
+};
+export { items, manufactures, tools, structures, armor, defend, weapons, potions, mounts };
 //# sourceMappingURL=dictionaries.js.map
