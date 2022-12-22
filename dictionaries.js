@@ -628,7 +628,7 @@ armor.leopard_coat = {
     id: "leopard_coat",
     name: "leopard coat",
     img: "misty_island_assets/armor/leopard-coat.png",
-    ingredients: [[manufactures.iron_plate, 6], [items.leather, 2]],
+    ingredients: [[items.smilodon_leather, 6], [items.neophron_feather, 2]],
     unlock: "Industrial Worktable",
     notes: "Defense +8%. +30 Life Force when equipped."
 };
