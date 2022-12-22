@@ -35,7 +35,7 @@ items.deep_sea_stone = {id: "deep_sea_stone", name: "deep sea stone", img: "mist
 items.thunder_stone = {id: "thunder_stone", name: "thunder stone", img: "misty_island_assets/materials/thunder-stone.png", notes: ""};
 items.lava_stone_powder = {id: "lava_stone_powder", name: "lava stone powder", img: "misty_island_assets/materials/lava-stone-powder.png", notes: ""};
 items.lava_stone = {id: "lava_stone", name: "lava stone", img: "misty_island_assets/materials/lava-stone.png", notes: ""};
-
+items.water = {id: "water", name: "water", img: "misty_island_assets/materials/water.png", notes: ""};
 
 // ------------------------------------------------
 // -------------------EDIBLES----------------------
@@ -99,6 +99,14 @@ manufactures.iron_rod = {
     name: "iron rod",
     img: "misty_island_assets/manufacture/iron-rod.png", 
     ingredients: [[items.iron, 2]],
+    unlock: "Survival Worktable",
+    notes: ""
+};
+manufactures.cement_powder = {
+    id: "cement_powder",
+    name: "cement powder",
+    img: "misty_island_assets/manufacture/cement-powder.png", 
+    ingredients: [[items.stone, 3], [items.water, 1]],
     unlock: "Survival Worktable",
     notes: ""
 };
@@ -206,7 +214,46 @@ manufactures.regeneration_solution = {
     unlock: "Alchemy Pot",
     notes: ""
 };
-
+manufactures.propeller = {
+    id: "propeller",
+    name: "propeller",
+    img: "misty_island_assets/manufacture/propeller.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.cog, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+manufactures.engine = {
+    id: "engine",
+    name: "engine",
+    img: "misty_island_assets/manufacture/engine.png",
+    ingredients: [[manufactures.iron_plate, 3], [items.lava_stone, 2], [manufactures.screw, 1], [manufactures.cog, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+manufactures.lava_stone_powder = {
+    id: "lava_stone_powder",
+    name: "lava stone powder",
+    img: "misty_island_assets/materials/lava-stone-powder.png",
+    ingredients: [[items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+manufactures.lava_stone = {
+    id: "lava_stone",
+    name: "lava stone",
+    img: "misty_island_assets/materials/lava-stone.png",
+    ingredients: [[items.lava_stone_powder, 5]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+manufactures.refined_lava_stone_crystal = {
+    id: "refined_lava_stone_crystal",
+    name: "refined lava stone crystal",
+    img: "",
+    ingredients: [[items.lava_stone, 3]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
 
 // ------------------------------------------------
 // ---------------------TOOLS----------------------
@@ -315,14 +362,6 @@ manufactures.water = {
     unlock: "Industrial Worktable",
     notes: ""
 };
-manufactures.cement_powder = {
-    id: "cement_powder",
-    name: "cement powder",
-    img: "misty_island_assets/manufacture/cement-powder.png", 
-    ingredients: [[items.stone, 3], [manufactures.water, 1]],
-    unlock: "Survival Worktable",
-    notes: ""
-};
 tools.whetstone = {
     id: "whetstone",
     name: "whetstone",
@@ -363,6 +402,22 @@ tools.cookbook = {
     unlock: "Survival Worktable",
     notes: ""
 };
+tools.hand_drill ={
+    id: "hand_drill",
+    name: "hand drill",
+    img: "",
+    ingredients: [[items.iron, 3], [manufactures.cog, 1], [items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+tools.chainsaw = {
+    id: "chainsaw",
+    name: "chainsaw",
+    img: "",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.screw, 1], [items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
 tools.leather_saddle = {
     id: "leather_saddle",
     name: "leather saddle",
@@ -370,7 +425,15 @@ tools.leather_saddle = {
     ingredients: [[items.fainted_jungle_pig, 1], [manufactures.rope, 1], [items.leather, 2]],
     unlock: "Survival Worktable, need fainted jungle pig in inventory",
     notes: "Gives jungle pig mount on use"
-}
+};
+tools.magic_bag = {
+    id: "magic_bag",
+    name: "magic bag",
+    img: "",
+    ingredients: [[items.leather, 4], [items.lizardman_skin, 2], [items.gold, 1]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
 
 // ------------------------------------------------
 // ------------------STRUCTURES--------------------
@@ -387,7 +450,7 @@ structures.industrial_worktable = {
     id: "industrial_worktable",
     name: "industrial worktable",
     img: "misty_island_assets/structures/industrial-worktable.png", 
-    ingredients: [[manufactures.board, 3], [manufactures.iron_rod, 5], [items.gold, 5]],
+    ingredients: [[manufactures.brick, 3], [manufactures.iron_rod, 5], [items.gold, 5]],
     unlock: "Survival Worktable",
     notes: ""
 };
