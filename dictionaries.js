@@ -36,7 +36,7 @@ items.water = { id: "water", name: "water", img: "misty_island_assets/materials/
 // -------------------EDIBLES----------------------
 // ------------------------------------------------
 items.bird_egg = { id: "bird_egg", name: "bird egg", img: "misty_island_assets/edibles/bird-egg.png", notes: "" };
-items.caterpillar = { id: "caterpillar", name: "caterpillar", img: "misty_island_assets/edibles/caterpillar", notes: "" };
+items.caterpillar = { id: "caterpillar", name: "caterpillar", img: "misty_island_assets/edibles/caterpillar.png", notes: "" };
 items.banana = { id: "banana", name: "banana", img: "misty_island_assets/edibles/banana.png", notes: "" };
 items.herb = { id: "herb", name: "herb", img: "misty_island_assets/edibles/herb.png", notes: "" };
 items.petal = { id: "petal", name: "petal", img: "misty_island_assets/edibles/petal.png", notes: "" };
@@ -397,7 +397,7 @@ tools.cookbook = {
 tools.hand_drill = {
     id: "hand_drill",
     name: "hand drill",
-    img: "",
+    img: "misty_island_assets/toolbox/hand-drill.png",
     ingredients: [[items.iron, 3], [manufactures.cog, 1], [items.lava_stone, 1]],
     unlock: "Engineering Worktable",
     notes: ""
@@ -405,7 +405,7 @@ tools.hand_drill = {
 tools.chainsaw = {
     id: "chainsaw",
     name: "chainsaw",
-    img: "",
+    img: "misty_island_assets/toolbox/chainsaw.png",
     ingredients: [[manufactures.iron_plate, 2], [manufactures.screw, 1], [items.lava_stone, 1]],
     unlock: "Engineering Worktable",
     notes: ""
@@ -565,6 +565,38 @@ structures.sticky_platform = {
     unlock: "Alchemy Pot",
     notes: ""
 };
+structures.magic_analysis_device = {
+    id: "magic_analysis_device",
+    name: "magic analysis device",
+    img: "misty_island_assets/structures/magic-analysis-device.png",
+    ingredients: [[items.lava_stone, 10], [manufactures.processed_wood, 1], [manufactures.propeller, 1], [manufactures.gold_bar, 2]],
+    unlock: "Engineering Worktable",
+    notes: "Enables crafting rare materials at enchantment table."
+};
+structures.enchantment_table = {
+    id: "enchantment_table",
+    name: "enchantment table",
+    img: "misty_island_assets/structures/enchantment-table.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.gold_bar, 2], [items.lava_stone_powder, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+structures.animal_skin_tent = {
+    id: "animal_skin_tent",
+    name: "animal skin tent",
+    img: "misty_island_assets/structures/animal-skin-tent.png",
+    ingredients: [[items.leather, 4], [manufactures.iron_plate, 1], [manufactures.processed_wood, 1], [manufactures.rope, 4]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+structures.automatic_fishing_rod = {
+    id: "automatic_fishing_rod",
+    name: "automatic fishing rod",
+    img: "misty_island_assets/structures/automatic-fishing-rod.png",
+    ingredients: [[manufactures.iron_rod, 1], [manufactures.cog, 1], [items.lava_stone_powder, 2], [items.caterpillar, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
 // ------------------------------------------------
 // --------------------ARMOR-----------------------
 // ------------------------------------------------
@@ -631,6 +663,30 @@ armor.leopard_coat = {
     ingredients: [[items.smilodon_leather, 6], [items.neophron_feather, 2]],
     unlock: "Industrial Worktable",
     notes: "Defense +8%. +30 Life Force when equipped."
+};
+armor.relic_exploration_suit = {
+    id: "relic_exploration_suit",
+    name: "relic exploration suit",
+    img: "misty_island_assets/armor/relic-exploration-suit.png",
+    ingredients: [[items.leather, 10], [manufactures.rope, 2], [items.feather, 4]],
+    unlock: "Engineering Worktable",
+    notes: "Defense +8%."
+};
+armor.functional_active_wear = {
+    id: "functional_active_wear",
+    name: "functional_active_wear",
+    img: "misty_island_assets/armor/functional-active-wear.png",
+    ingredients: [[items.smilodon_leather, 4], [items.leather, 4], [items.deep_sea_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Defense +12%. +40 Acting Power when equipped."
+};
+armor.heavy_armor_battle_suit = {
+    id: "heavy_armor_battle_suit",
+    name: "heavy armor battle suit",
+    img: "misty_island_assets/armor/heavy-armor-battle-suit.png",
+    ingredients: [[manufactures.iron_plate, 4], [items.leather, 2], [manufactures.gold_bar, 2], [items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Defense +14%. +25 Attack Power when equipped."
 };
 armor.jungle_floral_crown = {
     id: "jungle_floral_crown",
@@ -719,6 +775,22 @@ armor.lizardman_chief_hat = {
     ingredients: [[items.lizardman_skin, 4], [items.neophron_feather, 2]],
     unlock: "Alchemy Pot",
     notes: "Defense +6%."
+};
+armor.sturdy_combat_helmet = {
+    id: "sturdy_combat_helmet",
+    name: "sturdy combat helmet",
+    img: "misty_island_assets/armor/sturdy-combat-helmet.png",
+    ingredients: [[manufactures.iron_plate, 1], [manufactures.gold_bar, 1], [items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Defense +9%."
+};
+armor.lantern_hat = {
+    id: "lantern_hat",
+    name: "lantern hat",
+    img: "misty_island_assets/armor/lantern-hat.png",
+    ingredients: [[items.leather, 3], [items.iron, 2], [items.lava_stone_powder, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Defense +8%."
 };
 armor.rope_sandals = {
     id: "rope_sandals",
@@ -899,6 +971,30 @@ weapons.crude_cannon = {
     unlock: "Industrial Worktable",
     notes: "Attack +110. Damage +100%. Attack Speed 2. Attack Count 1. Mob Count 4."
 };
+weapons.pistol = {
+    id: "pistol",
+    name: "pistol",
+    img: "misty_island_assets/weapons/pistol.png",
+    ingredients: [[items.iron, 5], [manufactures.gunpowder, 2], [manufactures.screw, 1], [manufactures.lever, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Attack +120. Damage +100%. Attack Speed -1. Attack Count 1. Mob Count 2."
+};
+weapons.machine_gun = {
+    id: "machine_gun",
+    name: "machine gun",
+    img: "misty_island_assets/weapons/machine-gun.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.gunpowder, 3], [manufactures.screw, 1], [manufactures.lever, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Attack +55. Damage +50%. Attack Speed -2. Attack Count 3. Mob Count 6."
+};
+weapons.hand_cannon = {
+    id: "hand_cannon",
+    name: "hand cannon",
+    img: "misty_island_assets/weapons/hand-cannon.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.gunpowder, 3], [items.lava_stone, 1]],
+    unlock: "Engineering Worktable",
+    notes: "Attack +45. Damage +100%. Attack Speed 2. Attack Count 3. Mob Count 6."
+};
 // ------------------------------------------------
 // -------------------DEFEND-----------------------
 // ------------------------------------------------
@@ -1044,6 +1140,22 @@ potions.poison_potion = {
 // ------------------------------------------------
 // ---------------------MOUNT----------------------
 // ------------------------------------------------
+mounts.airplane = {
+    id: "airplane",
+    name: "airplane one-time coupon",
+    img: "misty_island_assets/mounts/airplane.png",
+    ingredients: [[manufactures.processed_wood, 1], [manufactures.iron_plate, 2], [manufactures.propeller, 1], [manufactures.engine, 1]],
+    unlock: "Survival Worktable",
+    notes: ""
+};
+mounts.submarine = {
+    id: "submarine",
+    name: "submarine one-time coupon",
+    img: "misty_island_assets/mounts/submarine.png",
+    ingredients: [[manufactures.iron_plate, 3], [manufactures.lever, 1], [manufactures.screw, 2], [manufactures.engine, 1]],
+    unlock: "Survival Worktable",
+    notes: "Duration 300s."
+};
 mounts.magic_wings = {
     id: "magic_wings",
     name: "magic wings one-time coupon",
