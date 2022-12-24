@@ -320,7 +320,7 @@ tools.leaves_bag = {
     img: "misty_island_assets/toolbox/leaves-bag.png",
     ingredients: [[items.leaf, 6]],
     unlock: "Survival Worktable",
-    notes: "+4 inventory slots"
+    notes: "+4 inventory slots."
 };
 tools.leather_bag = {
     id: "leather_bag",
@@ -328,7 +328,15 @@ tools.leather_bag = {
     img: "misty_island_assets/toolbox/leather-bag.png",
     ingredients: [[items.leather, 6]],
     unlock: "Industrial Worktable",
-    notes: "+8 inventory slots"
+    notes: "+8 inventory slots."
+};
+tools.magic_bag = {
+    id: "magic_bag",
+    name: "magic bag",
+    img: "misty_island_assets/toolbox/magic-bag.png",
+    ingredients: [[items.leather, 4], [items.lizardman_skin, 2], [items.gold, 1]],
+    unlock: "Enchantment Table",
+    notes: "+12 inventory slots."
 };
 tools.empty_bucket = {
     id: "empty_bucket",
@@ -417,14 +425,6 @@ tools.leather_saddle = {
     ingredients: [[items.fainted_jungle_pig, 1], [manufactures.rope, 1], [items.leather, 2]],
     unlock: "Survival Worktable, need fainted jungle pig in inventory",
     notes: "Gives jungle pig mount on use"
-};
-tools.magic_bag = {
-    id: "magic_bag",
-    name: "magic bag",
-    img: "",
-    ingredients: [[items.leather, 4], [items.lizardman_skin, 2], [items.gold, 1]],
-    unlock: "Engineering Worktable",
-    notes: ""
 };
 // ------------------------------------------------
 // ------------------STRUCTURES--------------------
@@ -597,6 +597,22 @@ structures.automatic_fishing_rod = {
     unlock: "Engineering Worktable",
     notes: ""
 };
+structures.holy_grail = {
+    id: "holy_grail",
+    name: "holy grail",
+    img: "misty_island_assets/structures/holy-grail.png",
+    ingredients: [[manufactures.gold_bar, 3], [items.lava_stone, 1]],
+    unlock: "Enchantment Table",
+    notes: ""
+};
+structures.weather_controller = {
+    id: "weather_controller",
+    name: "weather controller",
+    img: "misty_island_assets/structures/weather-controller.png",
+    ingredients: [[manufactures.gold_bar, 2], [manufactures.iron_rod, 2], [items.lava_stone, 1]],
+    unlock: "Enchantment Table",
+    notes: ""
+};
 // ------------------------------------------------
 // --------------------ARMOR-----------------------
 // ------------------------------------------------
@@ -687,6 +703,14 @@ armor.heavy_armor_battle_suit = {
     ingredients: [[manufactures.iron_plate, 4], [items.leather, 2], [manufactures.gold_bar, 2], [items.lava_stone, 1]],
     unlock: "Engineering Worktable",
     notes: "Defense +14%. +25 Attack Power when equipped."
+};
+armor.magic_robe = {
+    id: "magic_robe",
+    name: "magic robe",
+    img: "misty_island_assets/armor/magic-robe.png",
+    ingredients: [[items.smilodon_leather, 2], [items.neophron_feather, 2], [items.leather, 6], [items.thunder_stone, 1]],
+    unlock: "Enchantment Table",
+    notes: "Defense +13%."
 };
 armor.jungle_floral_crown = {
     id: "jungle_floral_crown",
@@ -848,6 +872,22 @@ armor.feather_boots = {
     unlock: "Industrial Worktable",
     notes: "Defense +5%. Speed +50. Jump +20."
 };
+armor.sole_shoes = {
+    id: "sole_shoes",
+    name: "sole shoes",
+    img: "misty_island_assets/armor/sole-shoes.png",
+    ingredients: [[items.feather, 8], [items.leather, 2]],
+    unlock: "Enchantment Table",
+    notes: "Defense +8%. Speed +45. Jump +20."
+};
+armor.stance_shoes = {
+    id: "stance_shoes",
+    name: "stance shoes",
+    img: "misty_island_assets/armor/stance-shoes.png",
+    ingredients: [[manufactures.iron_plate, 1], [items.leather, 4], [manufactures.cement_powder, 2]],
+    unlock: "Enchantment Table",
+    notes: "Defense +9%. Speed +35. Jump +15."
+};
 // ------------------------------------------------
 // -------------------WEAPON-----------------------
 // ------------------------------------------------
@@ -987,6 +1027,14 @@ weapons.machine_gun = {
     unlock: "Engineering Worktable",
     notes: "Attack +55. Damage +50%. Attack Speed -2. Attack Count 3. Mob Count 6."
 };
+weapons.dual_bowguns = {
+    id: "dual_bowguns",
+    name: "dual bowguns",
+    img: "misty_island_assets/weapons/dual-bowguns.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.iron_rod, 2], [items.lava_stone, 2], [manufactures.rope, 2]],
+    unlock: "Engineering Worktable",
+    notes: "Attack +90. Damage +80%. Attack Speed 0. Attack Count 1. Mob Count 4."
+};
 weapons.hand_cannon = {
     id: "hand_cannon",
     name: "hand cannon",
@@ -994,6 +1042,70 @@ weapons.hand_cannon = {
     ingredients: [[manufactures.iron_plate, 2], [manufactures.gunpowder, 3], [items.lava_stone, 1]],
     unlock: "Engineering Worktable",
     notes: "Attack +45. Damage +100%. Attack Speed 2. Attack Count 3. Mob Count 6."
+};
+weapons.flame_sword = {
+    id: "flame_sword",
+    name: "flame sword",
+    img: "misty_island_assets/weapons/flame-sword.png",
+    ingredients: [[manufactures.iron_plate, 1], [items.lava_stone, 1]],
+    unlock: "Enchantment Table",
+    notes: "Attack +65. Damage +100%. Attack Speed -1. Attack Count 2. Mob Count 3."
+};
+weapons.flame_sword = {
+    id: "flame_sword",
+    name: "flame sword",
+    img: "misty_island_assets/weapons/flame-sword.png",
+    ingredients: [[manufactures.iron_plate, 1], [items.lava_stone, 1]],
+    unlock: "Enchantment Table",
+    notes: "Attack +65. Damage +100%. Attack Speed -1. Attack Count 2. Mob Count 3."
+};
+weapons.water_cane = {
+    id: "water_cane",
+    name: "water cane",
+    img: "misty_island_assets/weapons/water-cane.png",
+    ingredients: [[manufactures.iron_plate, 1], [manufactures.gold_bar, 1], [manufactures.water_jewel, 2]],
+    unlock: "Enchantment Table",
+    notes: "Attack +75. Damage +100%. Attack Speed 0. Attack Count 2. Mob Count 3."
+};
+weapons.lightning_cane = {
+    id: "lightning_cane",
+    name: "lightning cane",
+    img: "misty_island_assets/weapons/lightning-cane.png",
+    ingredients: [[manufactures.iron_plate, 1], [manufactures.gold_bar, 1], [manufactures.lightning_jewel, 2]],
+    unlock: "Enchantment Table",
+    notes: "Attack +75. Damage +100%. Attack Speed 0. Attack Count 2. Mob Count 3."
+};
+weapons.work_gloves = {
+    id: "work_gloves",
+    name: "work gloves",
+    img: "misty_island_assets/weapons/work-gloves.png",
+    ingredients: [[items.smilodon_leather, 4], [manufactures.refined_lava_stone_crystal, 1]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Attack +50. Damage +100%. Attack Speed 0. Attack Count 1. Mob Count 5."
+};
+weapons.pot_lid = {
+    id: "pot_lid",
+    name: "pot lid",
+    img: "misty_island_assets/weapons/pot-lid.png",
+    ingredients: [[manufactures.iron_plate, 3], [manufactures.refined_lava_stone_crystal, 1], [manufactures.gold_bar, 2]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Attack +50. Damage +100%. Attack Speed 0. Attack Count 1. Mob Count 5."
+};
+weapons.heavy_sword_of_protection = {
+    id: "heavy_sword_of_protection",
+    name: "heavy sword of protection",
+    img: "misty_island_assets/weapons/heavy-sword-of-protection.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.refined_lava_stone_crystal, 1], [manufactures.gunpowder, 1]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Attack +90. Damage +100%. Attack Speed 1. Attack Count 3. Mob Count 5."
+};
+weapons.flag_of_protection = {
+    id: "flag_of_protection",
+    name: "flag of protection",
+    img: "misty_island_assets/weapons/flag-of-protection.png",
+    ingredients: [[manufactures.iron_plate, 2], [manufactures.refined_lava_stone_crystal, 1], [manufactures.gold_bar, 3]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Attack +120. Damage +100%. Attack Speed 1. Attack Count 2. Mob Count 9."
 };
 // ------------------------------------------------
 // -------------------DEFEND-----------------------
@@ -1060,6 +1172,70 @@ defend.cannon_tower = {
     img: "misty_island_assets/defend/cannon-tower.png",
     ingredients: [[manufactures.iron_plate, 3], [manufactures.brick, 2], [manufactures.gunpowder, 1], [manufactures.gold_bar, 1]],
     unlock: "Industrial Worktable",
+    notes: ""
+};
+defend.enhanced_wall = {
+    id: "enhanced_wall",
+    name: "enhanced wall",
+    img: "misty_island_assets/defend/enhanced-wall.png",
+    ingredients: [[manufactures.brick, 4], [manufactures.gold_bar, 1], [manufactures.iron_plate, 1], [manufactures.cement_powder, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.steel_thorn_wall = {
+    id: "steel_thorn_wall",
+    name: "steel thorn wall",
+    img: "misty_island_assets/defend/steel-thorn-wall.png",
+    ingredients: [[manufactures.brick, 3], [manufactures.gold_bar, 1], [manufactures.iron_plate, 2], [manufactures.cement_powder, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.lava_wall = {
+    id: "lava_wall",
+    name: "lava wall",
+    img: "misty_island_assets/defend/lava-wall.png",
+    ingredients: [[manufactures.lava_stone, 2], [manufactures.lava_stone_powder, 5], [manufactures.iron_plate, 5], [manufactures.cement_powder, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.lava_stone_wall = {
+    id: "lava_stone_wall",
+    name: "lava wall",
+    img: "misty_island_assets/defend/lava-stone-wall.png",
+    ingredients: [[items.lava_stone, 3], [manufactures.gold_bar, 3], [manufactures.iron_plate, 5], [manufactures.cement_powder, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.improved_cannon_tower = {
+    id: "improved_cannon_tower",
+    name: "improved cannon tower",
+    img: "misty_island_assets/defend/improved-cannon-tower.png",
+    ingredients: [[manufactures.iron_plate, 5], [manufactures.cog, 2], [manufactures.gunpowder, 2], [manufactures.gold_bar, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.fireball_tower = {
+    id: "fireball_tower",
+    name: "fireball tower",
+    img: "misty_island_assets/defend/fireball-tower.png",
+    ingredients: [[items.lava_stone, 2], [manufactures.gold_bar, 3], [manufactures.processed_wood, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.lightning_tower = {
+    id: "lightning_tower",
+    name: "lightning tower",
+    img: "misty_island_assets/defend/lightning-tower.png",
+    ingredients: [[items.lava_stone, 1], [manufactures.lightning_jewel, 1], [manufactures.gold_bar, 3], [manufactures.processed_wood, 2]],
+    unlock: "Engineering Worktable",
+    notes: ""
+};
+defend.frozen_tower = {
+    id: "frozen_tower",
+    name: "frozen tower",
+    img: "misty_island_assets/defend/frozen-tower.png",
+    ingredients: [[items.lava_stone, 1], [manufactures.water_jewel, 1], [manufactures.gold_bar, 3], [manufactures.processed_wood, 2]],
+    unlock: "Engineering Worktable",
     notes: ""
 };
 // ------------------------------------------------
@@ -1137,6 +1313,30 @@ potions.poison_potion = {
     unlock: "Alchemy Pot",
     notes: "Attack +60 for 540s, Life Force -50%."
 };
+potions.frag_grenade = {
+    id: "frag_grenade",
+    name: "frag grenade",
+    img: "misty_island_assets/potions/frag-grenade.png",
+    ingredients: [[manufactures.iron_plate, 1], [manufactures.gunpowder, 1]],
+    unlock: "Enchantment Table",
+    notes: ""
+};
+potions.smoke_bomb = {
+    id: "smoke_bomb",
+    name: "smoke bomb",
+    img: "misty_island_assets/potions/smoke-bomb.png",
+    ingredients: [[manufactures.charcoal, 1], [manufactures.herbal_powder, 1], [items.lava_stone_powder, 1]],
+    unlock: "Enchantment Table",
+    notes: ""
+};
+potions.firebomb = {
+    id: "firebomb",
+    name: "firebomb",
+    img: "misty_island_assets/potions/firebomb.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [items.lava_stone_powder, 1]],
+    unlock: "Enchantment Table",
+    notes: ""
+};
 // ------------------------------------------------
 // ---------------------MOUNT----------------------
 // ------------------------------------------------
@@ -1161,7 +1361,7 @@ mounts.magic_wings = {
     name: "magic wings one-time coupon",
     img: "misty_island_assets/mounts/magic-wings.png",
     ingredients: [[items.neophron_feather, 2], [manufactures.cog, 2], [items.lava_stone_powder, 1]],
-    unlock: "Industrial Worktable",
+    unlock: "Alchemy Pot",
     notes: ""
 };
 export { items, manufactures, tools, structures, armor, defend, weapons, potions, mounts };
