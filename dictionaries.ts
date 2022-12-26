@@ -235,7 +235,7 @@ manufactures.lava_stone_powder = {
     name: "lava stone powder",
     img: "misty_island_assets/materials/lava-stone-powder.png",
     ingredients: [[items.lava_stone, 1]],
-    unlock: "Engineering Worktable",
+    unlock: "Enchantment Table",
     notes: ""
 };
 manufactures.lava_stone = {
