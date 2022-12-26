@@ -243,15 +243,15 @@ manufactures.lava_stone = {
     name: "lava stone",
     img: "misty_island_assets/materials/lava-stone.png",
     ingredients: [[items.lava_stone_powder, 5]],
-    unlock: "Engineering Worktable",
+    unlock: "Enchantment Table + Magic Analysis Device",
     notes: ""
 };
 manufactures.refined_lava_stone_crystal = {
     id: "refined_lava_stone_crystal",
     name: "refined lava stone crystal",
-    img: "",
+    img: "misty_island_assets/materials/refined-lava-stone-crystal.png",
     ingredients: [[items.lava_stone, 3]],
-    unlock: "Engineering Worktable",
+    unlock: "Enchantment Table + Magic Analysis Device",
     notes: ""
 };
 
@@ -1253,6 +1253,22 @@ defend.frozen_tower = {
     ingredients: [[items.lava_stone, 1], [manufactures.water_jewel, 1], [manufactures.gold_bar, 3], [manufactures.processed_wood, 2]],
     unlock: "Engineering Worktable",
     notes: ""
+};
+defend.magma_tower = {
+    id: "magma_tower",
+    name: "magma tower",
+    img: "misty_island_assets/defend/magma-tower.png",
+    ingredients: [[manufactures.refined_lava_stone_crystal, 1], [manufactures.gold_bar, 3], [manufactures.processed_wood, 3], [manufactures.cement_powder, 5]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Craft refined lava stone crystal for recipe to appear."
+};
+defend.magic_bullet_tower = {
+    id: "magic_bullet_tower",
+    name: "magic bullet tower",
+    img: "misty_island_assets/defend/magic-bullet-tower.png",
+    ingredients: [[manufactures.refined_lava_stone_crystal, 1], [manufactures.gold_bar, 3], [manufactures.processed_wood, 3], [manufactures.iron_plate, 3]],
+    unlock: "Enchantment Table + Magic Analysis Device",
+    notes: "Craft refined lava stone crystal for recipe to appear."
 };
 
 
