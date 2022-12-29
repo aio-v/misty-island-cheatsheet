@@ -515,7 +515,7 @@ structures.countertop = {
     id: "countertop",
     name: "countertop",
     img: "misty_island_assets/structures/countertop.png",
-    ingredients: [[manufactures.board, 1], [manufactures.brick, 2], [manufactures.iron_plate, 2], [manufactures.charcoal, 1]],
+    ingredients: [[manufactures.board, 2], [manufactures.brick, 2], [manufactures.iron_plate, 2], [manufactures.charcoal, 1]],
     unlock: "Industrial Worktable",
     notes: "3 cooking slots"
 };
