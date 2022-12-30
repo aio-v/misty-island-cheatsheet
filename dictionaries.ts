@@ -443,7 +443,7 @@ structures.survival_worktable = {
     id: "survival_worktable",
     name: "survival worktablle",
     img: "misty_island_assets/structures/survival-worktable.png", 
-    ingredients: [[manufactures.board, 2], [items.log, 3], [manufactures.rope, 1]],
+    ingredients: [[manufactures.board, 1], [items.log, 3], [manufactures.rope, 1]],
     unlock: "-",
     notes: ""
 };
