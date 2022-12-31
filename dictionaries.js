@@ -1297,6 +1297,14 @@ potions.attack_power_increase_potion = {
     unlock: "Alchemy Pot",
     notes: "Attack +40 for 540s."
 };
+potions.attack_power_explosion_potion = {
+    id: "attack_power_explosion_potion",
+    name: "attack power explosion potion",
+    img: "misty_island_assets/potions/attack-power-explosion-potion.png",
+    ingredients: [[manufactures.regeneration_solution, 1], [manufactures.lava_solution, 1], [manufactures.herbal_powder, 1], [items.molar, 1]],
+    unlock: "Enchantment Table",
+    notes: "Attack +60 for 540s."
+};
 potions.defense_increase_potion = {
     id: "defense_increase_potion",
     name: "defense increase potion",
